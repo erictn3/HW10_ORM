@@ -73,11 +73,11 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-  .then((tag) => res.status(200).json(tag))
-  .catch((err) => {
-    console.log(err);
-    res.status(404).json(err);
-  });
+    .then((tag) => res.status(200).json(tag))
+    .catch((err) => {
+      console.log(err);
+      res.status(404).json(err);
+    });
 });
 
 module.exports = router;
